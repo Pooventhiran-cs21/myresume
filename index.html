@@ -36,6 +36,7 @@
         }
     </style>
     <div class="container">
+	<div id="htmlContent">
         <h2 class="text-center">RESUME</h2>
         <div class="row">
         <div class="col-4">
@@ -161,3 +162,45 @@
                         knowledge and belief.</li>
                 </ul>
             </div>
+
+ <div>
+                <p class="head"><b>PLACE:</b> SATHYAMANGALAM</p>
+                <div class="row">
+                    <div class="col-4">
+                        <p class="head"><b>DATE:</b></p>
+                    </div>
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <p>SIGNATURE</p>
+
+                    </div>
+</div>
+</body>
+<div id="editor"></div>
+
+<center>
+
+<p>
+
+
+<button onclick="printDiv('htmlContent')">Print / Save Pdf</button>
+
+</p>
+
+</center>
+
+<script type="text/javascript">
+
+      function printDiv(div_id) 
+    	{
+    	  var divToPrint=document.getElementById(div_id);
+    	  var newWin=window.open('','Print-Window');
+    	  newWin.document.open();
+    	  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+    	  newWin.document.close();
+    	  setTimeout(function() { newWin.close();},10);
+    	}
+</script>
+</html>
